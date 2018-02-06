@@ -1,0 +1,16 @@
+config:
+  target: "http://127.0.0.1:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+  processor: "./orderService/artilleryDataGen.js"
+
+scenarios:
+  - name: "hit get request"
+    flow:
+      - loop:
+        - function: "generateUser"
+        - get:
+            url: "/orders/{{ user_id }}"
+        # - log: "sent request with {{ user_id }}"
+        count: 150

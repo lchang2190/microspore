@@ -28,13 +28,19 @@
   },
   "homepage": "https://github.com/microspore/microspore#readme",
   "dependencies": {
+    "artillery": "^1.6.0-12",
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
+    "chai": "^4.1.2",
     "faker": "^4.1.0",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.3.0",
     "newrelic": "^2.7.0",
     "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }
