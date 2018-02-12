@@ -1,25 +1,12 @@
 var faker = require('faker');
 var uuid = require('uuid/v1');
 var axios = require('axios');
-var db = require('./database/index.js');
 const fs = require('fs');
 // const file = fs.createWriteStream('./bigFile5.txt');
 
 var randomName = faker.name.findName(); // Rowan Nikolaus
 var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
 var randomCard = faker.helpers.createCard(); // random contact card containing many properties
-
-// var generateDataObject = function() {
-// 	var order = {
-// 		order_id: uuidv1(), 		
-// 		user_id: faker.random.number(),
-// 		products: faker.commerce.product(),
-// 		amount: faker.finance.amount(),
-// 		completed: faker.random.boolean()
-// 	}
-
-// 	return JSON.stringify(order);
-// }
 
 var generateDataArrayTrue = function () {
 	var data = [
@@ -48,8 +35,8 @@ var generateAlot = function() {
 var insertNewOrder = function () {
 	axios.post('http://localhost:3000/orders', { 
 		params: {
-	  	order_id: 69028, 		
-			user_id: 1000032,
+	  	order_id: faker.random.number(), 		
+			user_id: faker.random.number(),
 			products: faker.commerce.product(),
 			amount: faker.finance.amount(),
 			completed: true
@@ -86,6 +73,6 @@ var getCompletedOrders = function () {
 
 
 // generateAlot();
-// insertNewOrder();
-getOrder(1000032);
+insertNewOrder();
+// getOrder(83068);
 // getCompletedOrders();

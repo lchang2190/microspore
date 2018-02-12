@@ -24,4 +24,3 @@ CREATE TABLE completed (
 	PRIMARY KEY(user_id, amount)
 );
 
-
