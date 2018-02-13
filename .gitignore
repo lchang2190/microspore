@@ -38,3 +38,5 @@ bower_components/
 
 # Editor directorys
 .vscode/
+
+./orderService/Events/config.js

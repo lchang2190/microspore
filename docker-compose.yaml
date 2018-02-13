@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: "lchang2190/orderservice:node"
+    links:
+      - cassandra
+    ports: 
+      - "8080:8080"
+    volumes:
+      - "/usr/src/orderService"
+
+  cassandra:
+    image: "lchang2190/orderservice:cassandra"
+    ports:
+      - "8081:9160"
+    volumes:
+      - "/usr/src/cassandra"
