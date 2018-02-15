@@ -2,7 +2,7 @@ var faker = require('faker');
 var uuid = require('uuid/v1');
 var axios = require('axios');
 const fs = require('fs');
-// const file = fs.createWriteStream('./bigFile5.txt');
+const file = fs.createWriteStream('./dockerData.txt');
 
 var randomName = faker.name.findName(); // Rowan Nikolaus
 var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
@@ -23,7 +23,7 @@ var generateDataArrayFalse = function () {
 }
 
 var generateAlot = function() {
-	for (let i = 0; i < 2000000; i++) {
+	for (let i = 0; i < 500000; i++) {
 		if (i % 50000 === 0) {
 			file.write(generateDataArrayFalse() + '\n');
 		} else {
@@ -72,7 +72,7 @@ var getCompletedOrders = function () {
 }
 
 
-// generateAlot();
-insertNewOrder();
+generateAlot();
+// insertNewOrder();
 // getOrder(83068);
 // getCompletedOrders();

@@ -24,3 +24,5 @@ CREATE TABLE completed (
 	PRIMARY KEY(user_id, amount)
 );
 
+copy orders from '/usr/src/cassandra/dockerData.txt' with delimiter = ',';
+

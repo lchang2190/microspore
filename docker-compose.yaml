@@ -8,10 +8,11 @@ services:
       - "8080:8080"
     volumes:
       - "/usr/src/orderService"
+      //map "ec2url:dockerurl"
 
   cassandra:
     image: "lchang2190/orderservice:cassandra"
     ports:
-      - "8081:9160"
+      - "9160:9160"
     volumes:
       - "/usr/src/cassandra"

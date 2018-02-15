@@ -1,7 +1,7 @@
 const cassandra = require('cassandra-driver');
 const faker = require('faker');
-const client = new cassandra.Client({ contactPoints: ['127.0.0.1'], keyspace: 'orders' });
-
+const client = new cassandra.Client({ contactPoints: ['172.31.1.112'], keyspace: 'orders' });
+//172.17.0.3
 const newOrder = 'INSERT INTO orders (order_id, user_id, products, amount, completed) VALUES (?, ?, ?, ?, ?)';
 const getCart = 'SELECT * FROM orders WHERE user_id = ? and completed = false limit 1';
 const delOrder = 'DELETE FROM orders WHERE user_id = ? and completed = false';
