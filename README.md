@@ -3,14 +3,6 @@
 Scalable micro-service architecture representing simplified 
 product search and order data flows.
 
-## Roadmap
-
-View the project roadmap [here](https://trello.com/b/YEVVUNMx/roadmap)
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
-
 # Table of Contents
 
 1. [Usage](#Usage)
